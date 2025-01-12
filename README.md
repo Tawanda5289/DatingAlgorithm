@@ -1,7 +1,7 @@
 from scipy.optimize import linear_sum_assignment
 import numpy as np
 
-# Define the data with updated names
+# Define the data with random names
 men = [
     ("Daniel", "Liberal", "Running", "Rural", "Introverted"),
     ("Peter", "Liberal", "Chess", "Rural", "Outgoing"),
@@ -44,7 +44,7 @@ for i, man in enumerate(men):
 # Use Hungarian algorithm to find the optimal matching
 rowInd, colInd = linear_sum_assignment(-scoreMatrix)  # Negate scores for maximization
 
-# Display the results
+# Displaying the results
 totalScore = 0
 print("Optimal Matches:")
 for i in range(len(rowInd)):
